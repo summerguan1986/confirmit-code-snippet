@@ -1,3 +1,5 @@
+//Multi Grdi 每行选到的选项如果都相同 甄别
+
 ((f('S12_1').get().toString()==f('S12_2').get().toString())&&
  (f('S12_1').get().toString()==f('S12_3').get().toString())&&
  (f('S12_1').get().toString()==f('S12_4').get().toString())&&
