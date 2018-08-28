@@ -17,3 +17,12 @@ if( !re.test(f('Q3x9_5_other').get()))
   RaiseError();
   SetErrorMessage(CurrentLang(),"请输入数字，且最多保留一位小数");
 }
+
+
+//只可填写数字，填写其他内容无效
+$("input").keypress(function (e){
+  var charCode = (e.which) ? e.which : e.keyCode;
+  if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+    return false;
+  }
+});
