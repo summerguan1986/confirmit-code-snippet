@@ -1,7 +1,7 @@
 
 ClearForm(f('category3'));
 
-var cat :String = f('random3').get();
+var cat :String = f('random3').categories();
 var arr = cat.split(",");
 
 for(var i=1;i<=arr.length;i++)
