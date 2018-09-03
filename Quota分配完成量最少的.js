@@ -1,7 +1,7 @@
 //单选题
-f('Type').set(GetLeastFilledQuotaCodes('Type',1,f('QS6').get()).toString());
+f('Type').set(GetLeastFilledQuotaCodes('Type',1,f('QS6').categories()).toString());
 //多选题
-f("Type").set(new Array(GetLeastFilledQuotaCodes('Type', 5,f("QS6").get())));
+f("Type").set(new Array(GetLeastFilledQuotaCodes('Type', 5,f("QS6").categories())));
 
 
 //Quota圈选最少的
