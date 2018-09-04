@@ -28,21 +28,18 @@ function shuffle(array) {
 //建隐藏题hidShuffle
 
 //在题目中加入JS代码
-$(':text').attr("maxlength","200");
-//var text = "^f('l').any('9')^" == "true" ? "Other benefits" : "其他優惠";
-var text = "^f('l').any('9') ? 'Other benefits' : '其他優惠'^";
-$('#BEN1_61').parent().parent().before('<tr class="cust-other-header"><td colspan="2" class="group-header-label"><b>'+text+'</b></td></tr>');
+$('#S6_971').parent().parent().before('<tr class="cust-other-header"><td colspan="2" class="group-header-label"><b>其他</b></td></tr>');
 
 var $rows = [];
 var $header = $(".cust-other-header");
 //group to be anchored
-$("#BEN1_61,#BEN1_62,#BEN1_63,#BEN1_64,#BEN1_65,#BEN1_69").each(function(){ 
+$("#S6_971,#S6_972,#S6_973,#S6_974").each(function(){ 
   $rows.push($(this).closest("tr").detach());
 });
 
 
 //changed this to the number of rotation needed
-var order1 = "^f('hidShuffle').get()^";
+var order1 = "^f('hidShuffleS6').get()^";
 var order = order1.split(",");
 //alert(order1);
 //alert(order);
@@ -54,4 +51,4 @@ for(var i in order) {
   $header.after($rows[order[i]]);
 }
 
-$('#BEN1_97').parent().parent().before("<tr><td></td></tr>");
+$('#S6_99').parent().parent().before("<tr><td></td></tr>");
