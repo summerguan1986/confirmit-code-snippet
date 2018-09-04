@@ -1,10 +1,5 @@
 //分组，顺序随机或循环时，让“其他”组固定在最后
-
-//changed this to the number of rotation needed
-var order = [0,1,2,3,4,5];
-
-var val = shuffle(order);
-f('hidShuffle').set(val);
+//参考项目	FS ORD-347129-D1X1 Rising Sun Beauty Study (p3938650)
 
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
@@ -25,10 +20,20 @@ function shuffle(array) {
   return array;
 }
 
-//建隐藏题hidShuffle
+
+//changed this to the number of rotation needed
+var order = [0,1,2,3];
+
+var val = shuffle(order);
+f('hidShuffleS6').set(val);
+
+
+
+//建隐藏题(Open Text) hidShuffle 
 
 //在题目中加入JS代码
-$('#S6_971').parent().parent().before('<tr class="cust-other-header"><td colspan="2" class="group-header-label"><b>其他</b></td></tr>');
+//Code99是固定在最后的
+$('#S6_99').parent().parent().before('<tr class="cust-other-header"><td colspan="2" class="group-header-label"><b>其他</b></td></tr>');
 
 var $rows = [];
 var $header = $(".cust-other-header");
