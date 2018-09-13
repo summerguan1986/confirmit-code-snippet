@@ -12,10 +12,10 @@ $(document).ready(function(){
     $(this).find('.gridcell').eq(0).click(function(){
 
       if($(this).find('input[type=checkbox]').is(':checked')){
-        that.find('.gridcell').eq(1).find('.numberinput').val("").attr('disabled',true);
+        that.find('.gridcell').eq(1).find('.numberinput').val("").attr('disabled',false);
 
       }else{
-       that.find('.gridcell').eq(1).find('.numberinput').attr('disabled',false);
+       that.find('.gridcell').eq(1).find('.numberinput').attr('disabled',true);
      }      
    });   
   });
